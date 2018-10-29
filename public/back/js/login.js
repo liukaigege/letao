@@ -1,3 +1,4 @@
+
 $(function () {
   $("#form").bootstrapValidator({
 
@@ -22,6 +23,10 @@ $(function () {
             min: 1,
             max: 6,
             message: "用户名长度1到6位"
+          },
+
+          callback:{
+            message:"用户名不存在"
           }
         }
       },
@@ -39,6 +44,9 @@ $(function () {
             min: 6,
             max: 12,
             message: "密码长度6到12位"
+          },
+          callback:{
+            message:"密码错误"
           }
         }
       },
@@ -65,10 +73,12 @@ $(function () {
           location.href="index.html";
         };
         if(info.error === 1000){
-          alert(info.message);
+          // alert(info.message);
+          $("#form").data("bootstrapValidator").updateStatus("username","INVALID","callback");
         };
         if(info.error === 1001){
-          alert(info.message);
+          // alert(info.message);
+          $("#form").data("bootstrapValidator").updateStatus("password","INVALID","callback");
         };
       },
     })
@@ -78,5 +88,5 @@ $(function () {
   // 重置表单样式
   $("[type = 'reset']").click(function(){
     $("#form").data("bootstrapValidator").resetForm(true);
-  })
+  });
 });
