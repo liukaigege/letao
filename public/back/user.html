@@ -14,7 +14,7 @@
 
 <body>
   <!-- 侧边栏 -->
-  <div class="lt_aside">
+  <div class="lt_aside" >
     <div class="brand">
       <a href="#">黑马28期</a>
     </div>
@@ -24,8 +24,8 @@
     </div>
     <div class="nav">
       <ul>
-        <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
-        <li>
+        <li><a href="user.html" class="active"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+        <li >
           <a href="javascript:;" id="secList">
             <i class="glyphicon glyphicon-list"></i><span>分类管理</span>
           </a>
@@ -51,39 +51,29 @@
     <div class="lt_content">
       <ol class="breadcrumb">
         <li><a href="index.html">管理系统</a></li>
-        <li class="active">首页</li>
+        <li class="active">用户管理</li>
       </ol>
 
-      <!-- echarts数据可视化 -->
-      <!-- 准备一个有宽高的容器 -->
-
-      <div class="echarts_content" >
-          <div class="echarts_left pull-left " id="main-left"></div>
-          <div class="echarts_right pull-right" id="main-right"></div>
-      </div>
-
-
-    </div>
-
-
-    <!-- 模态框 -->
-    <!-- 外面这一层是蒙层，里面才是主体部分 -->
-    <div id="logOut" class="modal fade" tabindex="-1">
-      <div class="modal-dialog  modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">温馨提示</h4>
-          </div>
-          <div class="modal-body">
-            <p><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
-          </div>
+      <!-- 模态框 -->
+       <!-- 外面这一层是蒙层，里面才是主体部分 -->
+<div id="logOut" class="modal fade" tabindex="-1" >
+    <div class="modal-dialog  modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
         </div>
       </div>
+    </div>
+  </div>
+
     </div>
 
   </div>
@@ -93,8 +83,6 @@
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
-  <script src="./lib/echarts/echarts.min.js"></script>
-  <script src="./js/index.js"></script>
   <script src="./js/checkLogin.js"></script>
   <script src="./js/login.js"></script>
   <script src="./js/common.js"></script>

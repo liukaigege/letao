@@ -138,3 +138,11 @@ ul{
   color: #A94442;
 }
 
+
+.lt_main .echarts_left,
+.lt_main .echarts_right{
+  width: 48%;
+  height: 400px;
+  background-color: tomato;
+}
+

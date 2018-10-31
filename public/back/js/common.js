@@ -2,11 +2,16 @@
 // 给全局ajax注册开启事件
 $(document).ajaxStart(function(){
   NProgress.start();
-})
+});
 
 $(document).ajaxStop(function(){
-  NProgress.done();
-})
+  setTimeout(function() {
+    NProgress.done();
+  }, 1500);
+});
+
+
+
 
 $(function(){
   // 1.二级菜单的切换
