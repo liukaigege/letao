@@ -40,6 +40,10 @@ ul{
   left: 0;
   z-index: 999;
   background-color: #222D32;
+  transition: all 1s;
+}
+.lt_aside.hidemenu{
+  left: -180px;
 }
 
 /* 头部 */
@@ -99,6 +103,10 @@ ul{
 .lt_main{
   padding-left: 180px;
   padding-top: 50px;
+  transition: all 1s;
+}
+.lt_main.hidemenu{
+  padding-left: 0px;
 }
 .lt_main .lt_topbar{
   position: fixed;
@@ -108,7 +116,10 @@ ul{
   background-color: #3C8DBC;
   height: 50px;
   padding-left: 180px;
-  /* color: #fff; */
+  transition: all 1s;
+}
+.lt_main .lt_topbar.hidemenu{
+  padding-left: 0px;
 }
 .lt_main .lt_topbar a{
   color: #fff;
@@ -122,3 +133,8 @@ ul{
 .lt_main .lt_content{
   padding: 15px;
 }
+
+#logOut .modal-body {
+  color: #A94442;
+}
+
