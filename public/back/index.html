@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,44 @@
   <title>乐淘登录</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
-  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="./css/common.css">
 </head>
-<body>
 
-  
+<body>
+  <!-- 侧边栏 -->
+  <div class="lt_aside">
+    <div class="brand">
+      <a href="#">黑马28期</a>
+    </div>
+    <div class="user">
+      <img src="./images/02.jpg" alt="">
+      <p>超级管理员</p>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="#"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-list"></i><span>分类管理</span>
+          </a>
+          <div class="child">
+            <a href="#">一级分类</a>
+            <a href="#">二级分类</a>
+          </div>
+        </li>
+        <li><a href="#"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 主体部分 -->
+  <div class="lt_main">
+    <div class="lt_topbar">
+      <a href="#" class="icon_menu pull-left"><i class="glyphicon glyphicon-align-justify"></i> </a>
+      <a href="#" class="icon_logout pull-right"><i class="glyphicon glyphicon-log-out"></i> </a>
+    </div>
+  </div>
 
 
   <script src="./lib/jquery/jquery.min.js"></script>
@@ -22,4 +55,5 @@
   <script src="./js/login.js"></script>
   <script src="./js/common.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,25 @@
-body{
-  background-color: #222D32;
-  /* color: #fff; */
+html,body{
+  height: 100%;
+  width: 100%;
 }
+a:link,
+a:visited,
+a:hover,
+a:active{
+  text-decoration:none;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .mg_150{
   margin-top:150px;
 }
@@ -10,4 +28,86 @@ body{
   height: 40px;
   line-height: 40px;
   font-size: 20px;
+}
+
+/*左侧侧边栏部分*/
+
+.lt_aside{
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #222D32;
+}
+
+/* 头部 */
+.lt_aside .brand{
+  height: 50px;
+  background-color: #367FA9;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+.lt_aside .brand a{
+  color: #fff;
+}
+
+
+/* 用户 */
+
+.lt_aside .user{
+  height: 180px;
+  padding-top: 30px;
+}
+.lt_aside .user img{
+  height: 80px;
+  width: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.lt_aside .user p{
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* 导航 */
+
+.lt_aside .nav li a{
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 40px;
+  display: block;
+  border-left: 3px solid transparent;
+}
+.lt_aside .nav li a i{
+  margin-right: 5px;
+}
+.lt_aside .nav .child a{
+  padding-left: 60px;
+}
+.lt_aside .nav li a.active{
+  border-left: 3px solid #006699;
+  background-color: #1D1F21;
+}
+
+.lt_main .lt_topbar{
+  padding-left: 180px;
+  background-color: #3C8DBC;
+  height: 50px;
+  /* color: #fff; */
+}
+.lt_main .lt_topbar a{
+  display: block;
+  color: #fff;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
 }
