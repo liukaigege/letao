@@ -9,6 +9,12 @@ a:active{
   text-decoration:none;
 }
 
+.table.table-bordered th,
+.table.table-bordered td{
+  text-align: center;
+  vertical-align: middle;
+}
+
 img{
   display: block;
   width: 100%;
@@ -134,10 +140,6 @@ ul{
   padding: 15px;
 }
 
-#logOut .modal-body {
-  color: #A94442;
-}
-
 
 .lt_main .echarts_left,
 .lt_main .echarts_right{
@@ -145,4 +147,11 @@ ul{
   height: 400px;
   /* background-color: tomato; */
 }
+
+
+/* 模态框 */
+.modal-body {
+  color: #A94442;
+}
+
 
