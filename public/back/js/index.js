@@ -31,8 +31,8 @@ $(function () {
 
   var option = {
     title : {
-        text: '某站点用户访问来源',
-        subtext: '纯属虚构',
+        text: '热门品牌销售',
+        subtext: '2017年6月',
         x:'center'
     },
     tooltip : {
@@ -42,20 +42,20 @@ $(function () {
     legend: {
         orient: 'vertical',
         left: 'left',
-        data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+        data: ['耐克','阿迪达斯','李宁','新百伦','匡威']
     },
     series : [
         {
-            name: '访问来源',
+            name: '品牌',
             type: 'pie',
             radius : '55%',
             center: ['50%', '60%'],
             data:[
-                {value:335, name:'直接访问'},
-                {value:310, name:'邮件营销'},
-                {value:234, name:'联盟广告'},
-                {value:135, name:'视频广告'},
-                {value:1548, name:'搜索引擎'}
+                {value:335, name:'耐克'},
+                {value:310, name:'阿迪达斯'},
+                {value:234, name:'李宁'},
+                {value:135, name:'新百伦'},
+                {value:1548, name:'匡威'}
             ],
             itemStyle: {
                 emphasis: {
