@@ -68,12 +68,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>女士馆</td>
-            <td>阿萨德2</td>
-            <td>户外馆</td>
-          </tr>
+          
         </tbody>
       </table>
 
@@ -111,13 +106,14 @@
               <div class="form-group">
                 <div class="dropdown">
                   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                    请选择一级分类
+                    <span id="dropdownText">请选择一级分类</span>
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                   </ul>
                 </div>
+                <input type="hidden" name="categoryId">
               </div>
               <!-- bootstrap 要求input外层 套一个 form-group, 做表单校验时, 如果不加 form-group 会报错 -->
               <div class="form-group">
@@ -125,10 +121,12 @@
               </div>
 
               <div class="form-group">
-                <button class="btn btn-default">上传图片</button>
+                <label class="btn btn-default" for="fileLoad">上传图片</label>
+                <input name="pic1" data-url="/category/addSecondCategoryPic" type="file" id="fileLoad" style="display: none">
               </div>
-              <div class="form-group">
+              <div class="form-group" id="picUrl">
                 <img src="./images/none.png" alt="">
+                <input type="hidden" name="brandLogo">
               </div>
 
             </div>
@@ -170,12 +168,22 @@
         <td>{{(i+1)+(page-1)*size}}</td>
         <td>{{v.categoryName}}</td>
         <td>{{v.brandName}}</td>
-        <td><img src="{{v.brandLogo ? v.brandLogo : 'images/none.png' }}" alt="" ></td>
+        <td><img src="{{v.brandLogo}}" alt="" ></td>
       </tr>
     {{/each}}
   </script>
 
+  <script type="text/template" id="dropdownTmp">
+    {{each rows v i}}
+        <li><a href="#" data-id = "{{v.id}}">{{v.categoryName}}</a></li>
+    {{/each}}
+  </script>
+
+
+
   <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+  <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
   <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
